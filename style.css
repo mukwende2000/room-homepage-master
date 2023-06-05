@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.burger {
+    cursor: pointer;
+    width: 25px;
+    margin-top: 1rem;
+}
+.menu {
+    background-image: url('images/mobile-image-hero-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center -50px;
+    background-size: cover;
+    height: 400px;
+    padding: 1rem;
+    position: relative;
+}
+.logo { 
+    display: block;
+    margin: auto;
+}
+
+.desktop {
+    display: none;
+}
+.hide {
+    display: none;
+}
+.mobile {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 1rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -50px;
+    transition: .5s;
+}
+.active {
+    top: 0;
+}
+li {
+    margin: 0 .7rem;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.menu nav li a {
+    text-decoration: none;
+    transition: color .4s;
+}
+.mobile a {
+    color: black;
+}
+.menu nav li a:hover {
+    color: plum;
+}
+section:last-child img {
+    width: 100%;
+}
+
+.hero, .about-text {
+    padding: 2rem;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    width: 100%;
+    max-width: 400px;
+}
+.hero p, .about-text p {
+    line-height: 1.5rem;
+    color: grey;
+    margin: 2rem 0;
+}
+.hero a {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    color: #000;
+    font-weight: bold;
+    transition: all .4s;
+}
+.hero a:hover {
+    color: plum;
+}
+.about-text h2 {
+    text-transform: uppercase;
+}
+.slide-btns {
+    background-color: #000;
+    display: flex;
+    width: 100px;
+    cursor: pointer;
+    position: absolute;
+    top: 90%;
+    right: 0;
+}
+.next, .prev {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0.5rem;
+    transition: all .4s;
+}
+.next:hover, .prev:hover {
+    background-color: plum;
+}
+
+@media (min-width: 850px) {
+    .menu {
+        background-image: url('images/desktop-image-hero-1.jpg');
+        background-position: center center;
+        display: flex;
+        align-items: flex-start;
+        flex-basis: 100%;
+    }
+    .hero {
+        flex-basis: 100%;
+        padding: 10px;
+    }
+    .desktop a {
+        color: #fff;
+        transition: all .4s;
+    }
+    .desktop a:hover {
+        color: plum;
+    }
+    .menu .logo {
+        margin: initial;
+    }
+    .sec-1, .sec-2 {
+        display: flex;
+    }
+    .sec-2 > div {
+        flex-basis: 100%;
+    }
+    .sec-2 div img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .slide-btns {
+        left: 100%;
+    }
+    .menu .burger {
+        display: none;
+    }
+    .menu nav .desktop {
+        display: flex;
+        margin-left: 3rem;
+    }
+}
